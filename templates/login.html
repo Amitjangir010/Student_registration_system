@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        .input-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .input-container img {
+            margin-right: 10px;
+            height:32px;
+            width:32px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="message {{ message[1] }}">{{ message[0] }}</div>
+                {% endfor %}
+            {% else %}
+                <form method="POST" action="{{ url_for('login') }}">
+                    <div class="input-container">
+                        <img src="{{ url_for('static', filename='th.jpg') }}" alt="Logo" >
+                        <input type="text" name="hostname" placeholder="Database Hostname" required>
+                    </div>
+                    <div class="input-container">
+                        <img src="{{ url_for('static', filename='user.png') }}" alt="Logo">
+                        <input type="text" name="username" placeholder="Username" required>
+                    </div>
+                    <div class="input-container">
+                        <img src="{{ url_for('static', filename='password.png') }}" alt="Logo">
+                        <input type="password" name="password" placeholder="Password" required>
+                    </div>
+                    <button type="submit">Connect</button>
+                </form>
+            {% endif %}
+        {% endwith %}
+    </div>
+</body>
+</html>
