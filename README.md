@@ -32,7 +32,7 @@ The project contains the following files:
 4. run the xampp server and mysql workbench or your own dbms.
 5. Start the application by running `python main.py` in the terminal.
 6. Visit `http://localhost:5000` in your web browser to access the app.
-7. use database name as "root" , username="AMIT" , password="1234" (its default , you can change it in code )
+7. use database name as "root" , username="AMIT" , password="1234" (its default , you can change it in main.py code )
 
 ## Usage
 
