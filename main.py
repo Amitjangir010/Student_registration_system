@@ -17,7 +17,7 @@ def login():
         username = request.form['username']
         password = request.form['password']
         # This is a placeholder logic; replace it with actual logic if needed
-        if hostname and username and password:
+        if hostname=="root" and username=="abcd" and password=="1234":
             flash("Connected successfully!", "success")
             return redirect(url_for('dashboard'))
         else:
