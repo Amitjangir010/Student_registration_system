@@ -29,10 +29,9 @@ The project contains the following files:
 1. Make sure you have Python and Flask installed on your system.
 2. Clone this repository to your local machine.
 3. pip install required packages.
-4. run the xampp server and mysql workbench or your own dbms.
 5. Start the application by running `python main.py` in the terminal.
 6. Visit `http://localhost:5000` in your web browser to access the app.
-7. use database name as "root" , username="AMIT" , password="1234" (its default , you can change it in main.py code )
+7. use database name as "root" , username="abcd" , password="1234" (its default , you can change it in main.py code )
 
 ## Usage
 
