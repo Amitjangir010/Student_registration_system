@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for, Response, flash
 
 app = Flask(__name__)
+app.secret_key = 'random_key_for_sessions'
 
 students = []
 
