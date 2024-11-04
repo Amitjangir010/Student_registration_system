@@ -5,10 +5,10 @@ A modern, user-friendly student information management system built with Flask, 
 ## 📸 System Workflow
 
 <p align="center">
-  <img src="images/welcome.jpeg" width="250" alt="Login Interface" style="margin-right: 10px;"/>
-  <img src="images/login.jpeg" width="250" alt="Login Interface" style="margin-right: 10px;"/>
-  <img src="images/dashboard.jpeg" width="350" alt="Dashboard Interface" style="margin-right: 10px;"/>
-  <img src="images/update.jpeg" width="250" alt="Update Interface"/>
+  <img src="Images/welcome.jpeg" width="200" alt="Login Interface" style="margin-right: 10px;"/>
+  <img src="Images/login.jpeg" width="200" alt="Login Interface" style="margin-right: 10px;"/>
+  <img src="Images/dashboard.jpeg" width="300" alt="Dashboard Interface" style="margin-right: 10px;"/>
+  <img src="Images/update.jpeg" width="250" alt="Update Interface"/>
 </p>
 <p align="center">
   <em>Welcome → Login → Dashboard → Update Student Information</em>
@@ -47,17 +47,17 @@ A modern, user-friendly student information management system built with Flask, 
 
 ### Login Page
 
-<img src="images/login.jpeg" width="500" alt="Login Interface">
+<img src="Images/login.jpeg" width="500" alt="Login Interface">
 
 *Secure login with database credentials*
 
 ### Dashboard
-<img src="images/dashboard.jpeg" width="600" alt="Dashboard Interface">
+<img src="Images/dashboard.jpeg" width="600" alt="Dashboard Interface">
 
 *Comprehensive student management dashboard*
 
 ### Update Form
-<img src="images/update.jpeg" width="500" alt="Update Interface">
+<img src="Images/update.jpeg" width="500" alt="Update Interface">
 
 *Student information update form*
 
