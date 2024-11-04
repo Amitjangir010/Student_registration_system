@@ -66,7 +66,7 @@ A modern, user-friendly student information management system built with Flask, 
 1. Clone the repository:
 ```bash
 git clone https://github.com/Amitjangir010/Student_registration_system.git
-cd student-management-system
+cd Student_registration_system
 ```
 
 2. Install dependencies:
