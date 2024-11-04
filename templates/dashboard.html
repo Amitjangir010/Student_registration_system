@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="header">
+        <h1>Student Registration System</h1>
+    </div>
+    <img src="{{ url_for('static', filename='education.png') }}" alt="Logo" width="59px" height="55px" style="margin-bottom:-81px;margin-left:1100px;    margin-bottom: -80px;
+    margin-left: 1623px;">
+    <div class="dashboard-container">
+        <div class="input-section">
+            <!-- Add Student Form -->
+            <h2>Add Student</h2>
+            <form action="{{ url_for('add_student') }}" method="POST">
+                <!-- form fields for adding a student -->
+                <label for="id">ID:</label>
+                <input type="text" name="id" id="id" required>
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" required>
+                <label for="mobile">Mobile:</label>
+                <input type="text" name="mobile" id="mobile" required>
+                <label for="email">Email:</label>
+                <input type="text" name="email" id="email" required>
+                <label for="address">Address:</label>
+                <input type="text" name="address" id="address" required>
+                <label for="gender">Gender:</label>
+                <input type="text" name="gender" id="gender" required>
+                <label for="dob">DOB:</label>
+                <input type="text" name="dob" id="dob" required>
+                <button type="submit">Add Student</button>
+            </form>
+        </div>
+
+        <div class="output-section">
+            <!-- Search Student Form -->
+            <h2>Search Student</h2>
+            <form action="{{ url_for('search_student') }}" method="POST">
+                <input type="text" name="search_query" placeholder="Search id, name ,gender,email or address" required>
+                <button type="submit">Search</button>
+            </form>
+
+            <!-- Export Data to CSV Form -->
+            <h2>Data help</h2>
+            <form action="{{ url_for('export') }}" method="POST">
+                <button type="submit">Download CSV</button>
+            </form>
+            <form action="{{ url_for('show_student') }}" method="GET" style="display: inline;">
+                <button type="submit">Show All Students</button>
+            </form>
+             <p style="font-size: 20px;">Total rows : {{students|length}}</p>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Mobile</th>
+                    <th>Email</th>
+                    <th>Address</th>
+                    <th>Gender</th>
+                    <th>DOB</th>
+                    <th>Action</th>
+                </tr>
+                {% for student in students %}
+                <tr>
+                    <td>{{ student['id'] }}</td>
+                    <td>{{ student['name'] }}</td>
+                    <td>{{ student['mobile'] }}</td>
+                    <td>{{ student['email'] }}</td>
+                    <td>{{ student['address'] }}</td>
+                    <td>{{ student['gender'] }}</td>
+                    <td>{{ student['dob'] }}</td>
+                    <td>
+                        <form action="{{ url_for('delete_student', student_id=student['id']) }}" method="POST">
+                            <button type="submit">Delete</button>
+                        </form>
+                        <form action="{{ url_for('update_student_form', student_id=student['id']) }}" method="GET" style="margin-top: 2px;">
+                            <button type="submit">Update</button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+
+        </div>
+    </div>
+</body>
+</html>

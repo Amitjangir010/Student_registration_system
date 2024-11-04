@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Student</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        .txt {
+            font-size: 24px;
+        }
+
+        .update-container {
+            max-width: 712px;
+            padding: 50px;
+            margin: 0 auto;
+            font-size: x-large;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Update Student</h2>
+    <div class="update-container">
+        <form action="{{ url_for('update_student', student_id=student['id']) }}" method="POST">
+            <input type="hidden" name="id" value="{{ student['id'] }}">
+            <label for="name">Name:</label>
+            <input type="text" name="name" class="txt" value="{{ student['name'] }}" required>
+            <label for="mobile">Mobile:</label>
+            <input type="text" name="mobile" class="txt" value="{{ student['mobile'] }}" required>
+            <label for="email">Email:</label>
+            <input type="text" name="email" class="txt" value="{{ student['email'] }}" required>
+            <label for="address">Address:</label>
+            <input type="text" name="address" class="txt" value="{{ student['address'] }}" required>
+            <label for="gender">Gender:</label>
+            <input type="text" name="gender" class="txt" value="{{ student['gender'] }}" required>
+            <label for="dob">DOB:</label>
+            <input type="text" name="dob" class="txt" value="{{ student['dob'] }}" required>
+            <button type="submit">Update</button>
+        </form>
+    </div>
+</body>
+
+</html>

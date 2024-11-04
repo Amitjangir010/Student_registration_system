@@ -1,0 +1,141 @@
+/* Reset default browser styles */
+html, body {
+  margin-top:100px
+  padding: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.header h1 {
+            font-size: 36px;
+            font-weight: bold;
+            margin: 0;
+            margin-bottom: -109px;
+            margin-top: 49px;
+        }
+
+/* Dashboard container */
+.dashboard-container {
+   margin-top: 176px;
+   margin-left: 114px;
+   margin-right: 157px;
+    max-width: fit-content;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+/* Input section */
+.input-section {
+  width: 40%;
+  margin-right: 134px;
+}
+
+.input-section h2 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.input-section form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-section label {
+  margin-bottom: 5px;
+  color: #333;
+  font-weight: bold;
+}
+
+.input-section input[type="text"] {
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 347px;
+    height: 37px;
+    padding: 2px;
+    font-size: 20px;
+    border-radius: 9px;
+}
+.output-section input[type="text"] {
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 400px;
+    height: 37px;
+    padding: 2px;
+    font-size: 20px;
+    border-radius: 9px;
+}
+
+.input-section button[type="submit"] {
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 300px;
+  font-size: larger;
+}
+
+
+
+/* Output section */
+.output-section {
+  width: 58%;
+}
+
+.output-section h2 {
+  margin-bottom: 10px;
+  color: #333;
+  text-decoration:underline 2px;
+
+}
+
+.output-section table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.output-section th, .output-section td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  color: #333;
+  font-family: system-ui;
+  font-size:18px;
+}
+
+.output-section th {
+  background-color: #f2f2f2;
+}
+
+.output-section form {
+  display: inline-block;
+}
+
+.output-section button[type="submit"] {
+  padding: 9px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100px;
+  font-size: 15px;
+  margin-top: 1px;
+}
+
+
+/* Top of the screen */
+h1 {
+  text-align: center;
+  padding: 20px;
+  background-color: #f2f2f2;
+  color: #333;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
